@@ -8,6 +8,11 @@ class Stderred < Formula
 
   def install
     system "make"
+    if OS.mac?
+      lib.install "build/libstderred.dylib"
+    elsif OS.linux?
+      lib.install "build/libstderred.so"
+    end
   end
 
   def caveats
