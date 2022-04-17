@@ -10,10 +10,8 @@ class Stderred < Formula
     system "make"
     if OS.mac?
       lib.install "build/libstderred.dylib"
-    #   bin.install_symlink lib/"libstderred.dylib"
     elsif OS.linux?
       lib.install "build/libstderred.so"
-    #   bin.install_symlink lib/"libstderred.so"
     end
     bin.install "empty"
   end
