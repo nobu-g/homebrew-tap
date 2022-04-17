@@ -7,7 +7,7 @@ class Stderred < Formula
   depends_on "cmake" => :build
 
   def install
-    system "make" "install"
+    system "make install"
     if OS.mac?
       lib.install "build/libstderred.dylib"
     elsif OS.linux?
