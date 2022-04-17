@@ -5,12 +5,11 @@ class Stderred < Formula
   url 'https://github.com/sickill/stderred.git'
   version 'HEAD'
 
-  depends_on 'cmake'
+  depends_on "cmake" => :build
 
   def install
     mkdir 'build' do
-      system 'cmake', "-DCMAKE_INSTALL_PREFIX=#{prefix}", '../src'
-      system 'make', 'install'
+      system 'make'
     end
   end
 
