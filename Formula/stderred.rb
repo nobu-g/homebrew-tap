@@ -15,6 +15,7 @@ class Stderred < Formula
       lib.install "build/libstderred.so"
     #   bin.install_symlink lib/"libstderred.so"
     end
+    bin.install "empty"
   end
 
   def caveats
