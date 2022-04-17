@@ -7,9 +7,7 @@ class Stderred < Formula
   depends_on "cmake" => :build
 
   def install
-    mkdir "build" do
-      system "make"
-    end
+    system "make"
   end
 
   def caveats; <<~EOS
