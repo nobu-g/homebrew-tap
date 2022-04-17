@@ -7,7 +7,7 @@ class Stderred < Formula
   depends_on "cmake" => :build
 
   def install
-    system "make install"
+    system "make"
     if OS.mac?
       lib.install "build/libstderred.dylib"
       bin.install_symlink lib/"libstderred.dylib"
