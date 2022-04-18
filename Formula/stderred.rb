@@ -15,11 +15,11 @@ class Stderred < Formula
     end
     # system "echo", "This is stderred dummy executable to avoid empty installation error" > "stderred.dummy"
     touch "stderred.dummy"
-    inreplace "stderred.dummy", "", 'echo "This is stderred dummy executable to avoid empty installation error"'
+    inreplace "stderred.dummy", "", 'echo "This is a dummy executable for stderred to avoid empty installation error"'
     chmod 0755, "stderred.dummy"
-    system "false"
     # system "chmod", "755", "stderred.dummy"
     bin.install "stderred.dummy"  # TODO: create some binary
+    system "false"
   end
 
   def caveats
