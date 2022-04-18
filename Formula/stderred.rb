@@ -14,7 +14,8 @@ class Stderred < Formula
       lib.install "build/libstderred.so"
     end
     system "echo", "This is stderred dummy executable to avoid empty installation error" > "stderred.dummy"
-    system "chmod", "755", "stderred.dummy"
+    FileUtils.chmod 0755, "stderred.dummy"
+    # system "chmod", "755", "stderred.dummy"
     bin.install "stderred.dummy"  # TODO: create some binary
   end
 
