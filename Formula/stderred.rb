@@ -4,6 +4,8 @@ class Stderred < Formula
   url "https://github.com/sickill/stderred.git"
   version "HEAD"
 
+  keg_only :provided_by_macos
+
   depends_on "cmake" => :build
 
   def install
@@ -18,7 +20,7 @@ class Stderred < Formula
     inreplace "stderred.dummy", "", 'echo "This is a dummy executable for stderred to avoid empty installation error"'
     chmod 0755, "stderred.dummy"
     # system "chmod", "755", "stderred.dummy"
-    bin.install_symlink "stderred.dummy"
+    bin.install "stderred.dummy"
     system "false"
   end
 
