@@ -18,7 +18,7 @@ class Stderred < Formula
     inreplace "stderred.dummy", "", 'echo "This is a dummy executable for stderred to avoid empty installation error"'
     chmod 0755, "stderred.dummy"
     # system "chmod", "755", "stderred.dummy"
-    bin.install "stderred.dummy"  # TODO: create some binary
+    bin.install_symlink "stderred.dummy"
     system "false"
   end
 
