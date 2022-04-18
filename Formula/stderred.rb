@@ -13,8 +13,10 @@ class Stderred < Formula
     elsif OS.linux?
       lib.install "build/libstderred.so"
     end
-    system "echo", "This is stderred dummy executable to avoid empty installation error" > "stderred.dummy"
-    chmod 0755, "stderred.dummy"
+    # system "echo", "This is stderred dummy executable to avoid empty installation error" > "stderred.dummy"
+    system "touch" "stderred.dummy"
+    inreplace "stderred.dummy", "", 'echo "This is stderred dummy executable to avoid empty installation error"'
+    # chmod 0755, "stderred.dummy"
     # system "chmod", "755", "stderred.dummy"
     bin.install "stderred.dummy"  # TODO: create some binary
   end
