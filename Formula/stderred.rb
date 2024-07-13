@@ -1,7 +1,7 @@
 class Stderred < Formula
   desc "Stderr in red"
-  homepage "https://github.com/sickill/stderred"
-  url "https://github.com/sickill/stderred.git"
+  homepage "https://github.com/ku1ik/stderred"
+  url "https://github.com/ku1ik/stderred.git"
   version "1.0"
   license ""
 
