@@ -1,8 +1,8 @@
 class Stderred < Formula
   desc "Stderr in red"
-  homepage "https://github.com/ku1ik/stderred"
-  url "https://github.com/ku1ik/stderred.git"
-  version "1.0"
+  homepage "https://github.com/nobu-g/stderred"
+  url "https://github.com/nobu-g/stderred.git"
+  version "1.1"
   license ""
 
   depends_on "cmake" => :build
